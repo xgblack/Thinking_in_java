@@ -1,2 +1,2 @@
-# Thinking_in_java
-java编程思想练习
+# 《java编程思想》书本练习
+《java编程思想》书本内的练习
