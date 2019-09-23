@@ -1,0 +1,35 @@
+1: package i18_6;
+2: 
+3: import java.io.BufferedReader;
+4: import java.io.IOException;
+5: import java.io.PrintWriter;
+6: import java.io.StringReader;
+7: 
+8: /**
+9:  * @author 小光
+10:  * @date 2019/9/23 16:04
+11:  * className: FileOutputShortcut
+12:  * description:
+13:  * ***************************************************************************
+14:  * Copyright(C),2018-2019,https://blog.xgblack.cn  .All rights reserved.
+15:  * ***************************************************************************
+16:  */
+17: public class FileOutputShortcut {
+18:     static String file = "io/src/i18_6/FileOutputShortcut.out";
+19: 
+20:     public static void main(String[] args) throws IOException {
+21:         BufferedReader in = new BufferedReader(
+22:                 new StringReader(
+23:                         BufferedInputFile.read("io/src/i18_6/FileOutputShortcut.java")
+24:                 )
+25:         );
+26:         PrintWriter out = new PrintWriter(file);
+27:         int LineCount = 1;
+28:         String s;
+29:         while ((s = in.readLine()) != null) {
+30:             out.println(LineCount++ + ": " + s);
+31:         }
+32:         out.close();
+33:         System.out.println(BufferedInputFile.read(file));
+34:     }
+35: }
