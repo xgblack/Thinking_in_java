@@ -24,10 +24,10 @@ public class MyContainer1<T> {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            list.add(t);
-            ++count;
-            this.notifyAll();
         }
+        list.add(t);
+        ++count;
+        this.notifyAll();
     }
 
     public synchronized T get(){
@@ -65,7 +65,7 @@ public class MyContainer1<T> {
         for (int i = 0; i < 2; i++) {
             new Thread(()->{
                 for (int j = 0; j < 25; j++) {
-                    c.put(Thread.currentThread().getName() + "" + j);
+                    c.put(Thread.currentThread().getName() + "     " + j);
                 }
             },"p" + i).start();
         }
