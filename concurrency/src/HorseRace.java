@@ -1,4 +1,3 @@
-package examples.concurrency;//: concurrency/HorseRace.java
 // Using CyclicBarriers.
 import java.util.concurrent.*;
 import java.util.*;
